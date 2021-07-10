@@ -1,22 +1,26 @@
 package search;
 
-// Что тут происходит?)) РАЗБЕРИСЬ
-// тут как то затесался поиск суммы массива
+
+import java.util.Arrays;
 
 public class BinarySearch {
     public static void main(String[] args) {
 
-        int[] ints = new int[5];
+        int[] ints = new int[10];
 
         for (int i = 0; i < ints.length; i++) {
             ints[i] =(int) (Math.random() * 10);
         }
+        Arrays.sort(ints);
 
         for (int i :ints) {
             System.out.println(i);
         }
 
-        System.out.println(sum(ints));
+        int item = 5;
+
+        System.out.println();
+        System.out.println("Позиция числа 5: " + (binarySearch(ints, item)));
 
 
     }
@@ -43,16 +47,5 @@ public class BinarySearch {
     }
 
 
-    public static int sum (int[] i) {
-        if (i.length == 1) return i[0];
-        return i[0] + sum(minusArr(i));
-    }
 
-    public static int[] minusArr (int[] i) {
-        int[] result = new int[i.length - 1];
-        for (int j = 0; j < result.length; j++) {
-            result[j] = i[j + 1];
-        }
-        return result;
-    }
 }
