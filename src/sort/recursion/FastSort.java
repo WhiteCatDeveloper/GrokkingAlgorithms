@@ -13,16 +13,25 @@ public class FastSort {
     }
 
     private static int[] fastSort(int[] arr) {
+        // базовый случай. если массив меньше двух элементов, возвращаем его, если два, сортируем
         if (arr.length < 2) return arr;
+        else if (arr.length == 2) {
+            if (arr[0] < arr[1]) {
+                return arr;
+            } else {
+                return new int[] {arr[1], arr[0]};
+            }
+        }
+        // рекурсивный случай
         else {
-            //опорный элемент
-            int pivot = arr[0];
+            //опорный элемент. Лучше
+            int pivot = arr[arr.length / 2];
             //подмассив всех элементов меньше опорного
             int[] less =
             //подмассив элементов больше опорного
             int[] greater =
             //надо как то сложить их)) и передать в рекурсивный вызов дальше
-            return fastSort(less + pivot + greater);
+            return fastSort(less) + pivot + fastSort(greater);
         }
     }
 }
