@@ -9,8 +9,8 @@ public class BubbleSort {
         System.out.println(Arrays.toString(bubbleSort(ints)));
     }
 
-    // Нужно отполировать, чтобы небыло двойной работы
-    private static int[] bubbleSort(int[] arr) {
+    // Нужно сделать нормальное описание
+    public static int[] bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = arr.length -1; j > i; j--) {
                 if (arr[j - 1] > arr[j]) {
