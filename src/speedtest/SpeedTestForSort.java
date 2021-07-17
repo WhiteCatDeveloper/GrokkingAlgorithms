@@ -1,6 +1,7 @@
 package speedtest;
 
 import sort.BubbleSort;
+import sort.recursion.FastSort;
 
 import java.util.Arrays;
 
@@ -24,6 +25,19 @@ public class SpeedTestForSort {
         long currentTime = System.currentTimeMillis();
         System.out.println(Arrays.toString(BubbleSort.bubbleSort(ints)));
         long endTime = System.currentTimeMillis();
+        System.out.println("Сортировка пузырьком");
+        System.out.println("Время выполнения: " + (endTime - currentTime) + "мс.");
+
+        for (int i = 0; i < ints.length; i++) {
+            ints[i] =(int) (Math.random() * 1000);
+        }
+
+        System.out.println("Быстрая сортировка");
+        currentTime = System.currentTimeMillis();
+        FastSort.quickSort(ints, 0, ints.length - 1);
+        System.out.println(Arrays.toString(ints));
+        endTime = System.currentTimeMillis();
         System.out.println("Время выполнения: " + (endTime - currentTime) + "мс.");
     }
+
 }
