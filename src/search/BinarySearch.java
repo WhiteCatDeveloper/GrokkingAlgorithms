@@ -29,9 +29,10 @@ public class BinarySearch {
         int low = 0;
         int high = array.length - 1;
         int result = -1;
-        int count = 0;
+//        Счетчик итераций поиска
+//        int count = 0;
         while (low <= high) {
-            count++;
+//            count++;
             int mid = (high + low) / 2;
             if (array[mid] == item) {
                 result = mid;
@@ -42,7 +43,8 @@ public class BinarySearch {
                 low = mid + 1;
             }
         }
-        System.out.println(count);
+
+//        System.out.println(count);
         return result;
     }
 
