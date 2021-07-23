@@ -1,7 +1,7 @@
 package speedtest;
 
 import sort.BubbleSort;
-import sort.recursion.FastSort;
+import sort.FastSort;
 
 import java.util.Arrays;
 
