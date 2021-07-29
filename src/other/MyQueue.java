@@ -3,15 +3,16 @@ package other;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyQueue{
-    private final List<Object> list = new ArrayList<>();
+public class MyQueue<T>{
 
-    public void add (Object obj) {
+    private final List<T> list = new ArrayList<>();
+
+    public void add (T obj) {
         list.add(obj);
     }
 
-    public Object remote() {
-        Object result = list.get(0);
+    public T remote() {
+        T result = list.get(0);
         list.remove(list.get(0));
         return result;
     }

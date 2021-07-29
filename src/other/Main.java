@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         //Тестируем мою очередь и стек
-        MyQueue queue = new MyQueue();
+        MyQueue<String> queue = new MyQueue<>();
         String s = "abc";
         String s1 = "abcd";
         String s2 = "abcdf";
@@ -25,12 +25,12 @@ public class Main {
 
         System.out.println();
 
-        MyStack stack = new MyStack();
-        stack.add(s);
-        stack.add(s1);
-        stack.add(s2);
-        stack.add(s3);
-        stack.add(s4);
+        MyStack<Integer> stack = new MyStack<>();
+        stack.add(100);
+        stack.add(1000);
+        stack.add(10000);
+        stack.add(100000);
+        stack.add(1000000);
         System.out.println(stack.remote());
         System.out.println(stack.remote());
         System.out.println(stack.remote());
